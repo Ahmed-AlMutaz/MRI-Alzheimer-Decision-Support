@@ -1,0 +1,40 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>MRI Alzheimer Decision Support</title>
+  <link rel="stylesheet" href="/static/styles.css" />
+</head>
+<body>
+  <main class="container">
+    <section class="panel">
+      <h1>MRI Alzheimer Decision Support</h1>
+      <p class="subtitle">Upload a brain MRI image to get a fast AI-assisted classification.</p>
+
+      <form id="predictForm" class="upload-form">
+        <input id="fileInput" type="file" accept="image/*" required />
+        <button id="submitBtn" type="submit">Analyze Scan</button>
+      </form>
+
+      <div id="status" class="status"></div>
+
+      <section id="result" class="result hidden">
+        <h2>Result</h2>
+        <p><strong>Class:</strong> <span id="label"></span></p>
+        <p><strong>Confidence:</strong> <span id="confidence"></span></p>
+
+        <h3>Explanation</h3>
+        <p id="explanation"></p>
+
+        <h3>Class Probabilities</h3>
+        <ul id="probs"></ul>
+
+        <p id="disclaimer" class="disclaimer"></p>
+      </section>
+    </section>
+  </main>
+
+  <script src="/static/app.js"></script>
+</body>
+</html>

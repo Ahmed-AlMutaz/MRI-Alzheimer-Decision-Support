@@ -1,0 +1,12 @@
+__pycache__/
+*.pyc
+.ipynb_checkpoints/
+.venv/
+brain.venv/
+.env
+.DS_Store
+archive/
+models/*.onnx
+models/*.h5
+models/*.keras
+*.log
